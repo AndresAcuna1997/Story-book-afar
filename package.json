@@ -1,8 +1,10 @@
 {
   "name": "af-custom-components-library",
   "private": false,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "keywords": [
     "react",
     "storybook",
@@ -37,7 +39,7 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_7d44abbaffa6490",
     "clean": "rimraf dist/",
-    "copyfiles":"copyfiles -u 1 src/**/*.css dist"
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.7",
