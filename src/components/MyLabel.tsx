@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import './MyLabel.css';
 
-interface Props {
+export interface Props {
   /**
    * The label to display
    */
@@ -23,10 +23,15 @@ interface Props {
   * The custom font color of the label
   */
   fontColor?: string;
+
+  /**
+   * The background color of the label
+  */
+  backgroundColor?: string;
 }
 
-export const MyLabel: FC<Props> = ( { label, size = 'normal', allCaps, color, fontColor } ) => {
+export const MyLabel: FC<Props> = ( { label, size = 'normal', allCaps, color, fontColor, backgroundColor = 'trasparent' } ) => {
   return (
-    <span style={ { color: fontColor } } className={ `${ size } ${ color } label` }>{ allCaps ? label.toLocaleUpperCase() : label }</span>
+    <span style={ { color: fontColor, backgroundColor } } className={ `${ size } ${ color } label` }>{ allCaps ? label.toLocaleUpperCase() : label }</span>
   );
 };

@@ -1,19 +1,43 @@
 {
-  "name": "my-storybook",
-  "private": true,
-  "version": "0.0.0",
+  "name": "af-custom-components-library",
+  "private": false,
+  "version": "0.0.1",
   "type": "module",
+  "keywords": [
+    "react",
+    "storybook",
+    "typescript",
+    "vite",
+    "TEST UPLOAD"
+  ],
+  "license": "MIT",
+  "homepage": "https:://github.com/af-custom-components-library",
+  "repository": {
+    "url": "TODO",
+    "type": "git"
+  },
+  "files": [
+    "dist"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "peerDependencies": {
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
   "scripts": {
     "dev": "pnpm run storybook",
-    "build": "tsc && vite build",
+    "build": "pnpm run clean && tsc && pnpm run copyfiles",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "build-storybook": "storybook build",
+    "chromatic": "npx chromatic --project-token=chpt_7d44abbaffa6490",
+    "clean": "rimraf dist/",
+    "copyfiles":"copyfiles -u 1 src/**/*.css dist"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.7",
@@ -29,12 +53,18 @@
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "chromatic": "^10.2.2",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.15",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rimraf": "^5.0.5",
     "storybook": "7.6.7",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "my-storybook@0.0.0"
 }
