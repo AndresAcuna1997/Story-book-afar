@@ -1,7 +1,7 @@
 {
   "name": "af-custom-components-library",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.1.0",
   "type": "module",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -43,7 +43,7 @@
     "chromatic": "npx chromatic --project-token=chpt_7d44abbaffa6490",
     "clean": "rimraf dist/",
     "copyfiles": "copyfiles -u 1 src/**/*.css dist",
-    "push:npm":"np",
+    "push:npm": "np",
     "test": "echo 'no test specified'"
   },
   "devDependencies": {
@@ -73,6 +73,5 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   },
-  "readme": "ERROR: No README data found!",
-  "_id": "my-storybook@0.0.0"
+  "readme": "ERROR: No README data found!"
 }
