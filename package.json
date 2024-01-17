@@ -13,9 +13,9 @@
     "TEST UPLOAD"
   ],
   "license": "MIT",
-  "homepage": "https:://github.com/af-custom-components-library",
+  "homepage": "https://github.com/AndresAcuna1997/Story-book-afar",
   "repository": {
-    "url": "TODO",
+    "url": "https://github.com/AndresAcuna1997/Story-book-afar",
     "type": "git"
   },
   "files": [
@@ -30,6 +30,9 @@
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0"
   },
+  "engines": {
+    "node": ">=0.10.0"
+  },
   "scripts": {
     "dev": "pnpm run storybook",
     "build": "pnpm run clean && tsc && pnpm run copyfiles",
@@ -39,7 +42,8 @@
     "build-storybook": "storybook build",
     "chromatic": "npx chromatic --project-token=chpt_7d44abbaffa6490",
     "clean": "rimraf dist/",
-    "copyfiles": "copyfiles -u 1 src/**/*.css dist"
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist",
+    "push:npm":"np"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "7.6.7",
@@ -60,6 +64,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.15",
+    "np": "^9.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rimraf": "^5.0.5",
